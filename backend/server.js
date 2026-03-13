@@ -15,7 +15,19 @@ const eventImageRoutes = require("./routes/eventImageRoutes");
 
 const app = express();
 
-app.use(cors());
+// CORS configuration - allow requests from Vercel frontend
+const corsOptions = {
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:3000',
+    'https://club-management-system-three.vercel.app',
+    /\.vercel\.app$/  // Allow all Vercel preview deployments
+  ],
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // ✅ Static folder for uploaded images
