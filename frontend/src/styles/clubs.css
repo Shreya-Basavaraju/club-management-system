@@ -1,0 +1,406 @@
+.clubs-page {
+  min-height: 100vh;
+  background: #FDF6EC;
+  padding: 2rem 3rem;
+  position: relative;
+}
+
+/* Header Section */
+.clubs-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 3px solid #E5D4C1;
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.main-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.jit-logo-container {
+  flex-shrink: 0;
+}
+
+.jit-logo-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 3px solid #0099CC;
+  background: white;
+  padding: 0.25rem;
+  box-shadow: 0 4px 12px rgba(0, 153, 204, 0.3);
+}
+
+.brand-info {
+  flex: 1;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand-title {
+  font-size: 3rem;
+  color: #5C4033;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+}
+
+.brand-icon {
+  font-size: 3.5rem;
+}
+
+.brand-subtitle {
+  font-size: 1.2rem;
+  color: #7A6655;
+  margin: 0.5rem 0 0 0;
+  font-weight: 400;
+}
+
+.welcome-container {
+  text-align: right;
+  padding: 0.75rem 1.25rem;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #E5D4C1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  display: inline-block;
+}
+
+.welcome-message {
+  color: #5C4033;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+  display: inline;
+}
+
+.welcome-message strong {
+  color: #C4A484;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.user-role {
+  color: #7A6655;
+  font-size: 0.85rem;
+  margin: 0 0 0 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-add-club {
+  background: #C4A484;
+  color: white;
+  border: none;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-add-club:hover {
+  background: #B08A5B;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(196, 164, 132, 0.3);
+}
+
+.btn-delete-mode {
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-delete-mode:hover {
+  background: #c9302c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 83, 79, 0.3);
+}
+
+.btn-edit-mode {
+  background: #5bc0de;
+  color: white;
+  border: none;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-edit-mode:hover {
+  background: #46b8da;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(91, 192, 222, 0.3);
+}
+
+.edit-overlay-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(91, 192, 222, 0.95);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.edit-overlay-btn:hover {
+  background: rgba(70, 184, 218, 0.95);
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.btn-logout {
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.btn-logout:hover {
+  background: #c9302c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 83, 79, 0.3);
+}
+
+/* Empty State */
+.empty-clubs {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #7A6655;
+  font-size: 1.2rem;
+}
+
+/* Clubs Grid */
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 6rem;
+}
+
+.club-card-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.club-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.club-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.club-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2C1810;
+  padding: 1rem;
+  margin: 0;
+  background: #F5E6D3;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.club-image {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-top: 2px solid #E5D4C1;
+  border-bottom: 2px solid #E5D4C1;
+  background: white;
+  padding: 0.75rem;
+}
+
+.club-card p {
+  padding: 1rem;
+  color: #5C4033;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+  min-height: 60px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.delete-overlay-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(217, 83, 79, 0.95);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.delete-overlay-btn:hover {
+  background: rgba(201, 48, 44, 0.95);
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .clubs-page {
+    padding: 1.5rem 2rem;
+  }
+
+  .brand-title {
+    font-size: 2.5rem;
+  }
+
+  .clubs-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .clubs-page {
+    padding: 1rem;
+  }
+
+  .clubs-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .brand-title {
+    font-size: 2rem;
+  }
+
+  .brand-icon {
+    font-size: 2.5rem;
+  }
+
+  .brand-subtitle {
+    font-size: 1rem;
+  }
+
+  .admin-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .btn-add-club,
+  .btn-delete-mode,
+  .btn-edit-mode,
+  .btn-logout {
+    width: 100%;
+  }
+
+  .clubs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fixed Logout Button */
+.btn-logout-fixed {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 1rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(217, 83, 79, 0.3);
+  z-index: 100;
+}
+
+.btn-logout-fixed:hover {
+  background: #c9302c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(217, 83, 79, 0.4);
+}

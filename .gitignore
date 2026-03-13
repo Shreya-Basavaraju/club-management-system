@@ -1,0 +1,14 @@
+node_modules/
+.env
+backend/.env
+frontend/.env
+backend/node_modules/
+frontend/node_modules/
+frontend/dist/
+*.log
+.DS_Store
+backend/uploads/*.png
+backend/uploads/*.jpg
+backend/uploads/*.jpeg
+backend/uploads/*.webp
+!backend/uploads/.gitkeep
