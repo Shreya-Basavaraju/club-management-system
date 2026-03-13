@@ -29,7 +29,7 @@ function CertificatesPanel({ clubId }) {
   const handleDownload = async (eventId, eventTitle) => {
     try {
       const token = localStorage.getItem("token");
-      const baseURL = import.meta.env.VITE_API_URL || "https://club-management-system-2qs4.onrender.com";
+      const baseURL = import.meta.env.VITE_API_URL || "https://club-management-system-d0pp.onrender.com";
       const response = await fetch(`${baseURL}/api/certificates/generate/${eventId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
