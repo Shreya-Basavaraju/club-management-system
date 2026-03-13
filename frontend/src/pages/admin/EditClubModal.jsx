@@ -51,7 +51,7 @@ function EditClubModal({ club, onClose, onUpdated }) {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ maxHeight: '90vh', overflowY: 'auto' }}>
         <h2>Edit Club</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">

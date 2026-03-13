@@ -56,7 +56,7 @@ function EditEventModal({ event, onClose, onEventUpdated }) {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ maxHeight: '90vh', overflowY: 'auto' }}>
         <h2>Edit Event</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -112,7 +112,7 @@ function EditEventModal({ event, onClose, onEventUpdated }) {
             <label>Event Images</label>
             {preview && (
               <div className="image-preview">
-                <img src={preview} alt="Preview" />
+                <img src={preview} alt="Preview" style={{ maxHeight: '200px', objectFit: 'contain' }} />
               </div>
             )}
             <input
