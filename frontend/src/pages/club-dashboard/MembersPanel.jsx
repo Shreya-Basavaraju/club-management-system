@@ -30,11 +30,11 @@ function MembersPanel({ members, isAdmin }) {
               <tbody>
                 {members.map((member) => (
                   <tr key={member._id}>
-                    <td>{member.name || member.student?.name || "Unknown"}</td>
-                    <td>{member.section || "N/A"}</td>
-                    <td>{member.branch || "N/A"}</td>
-                    <td>{member.student?.email || ""}</td>
-                    <td>
+                    <td data-label="Name">{member.name || member.student?.name || "Unknown"}</td>
+                    <td data-label="Section">{member.section || "N/A"}</td>
+                    <td data-label="Branch">{member.branch || "N/A"}</td>
+                    <td data-label="Email">{member.student?.email || ""}</td>
+                    <td data-label="Joined">
                       {new Date(member.joinedAt).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'short',

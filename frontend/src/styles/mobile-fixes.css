@@ -53,4 +53,133 @@
   .panel-title {
     font-size: 1.4rem;
   }
+
+  /* ===== ADMIN BUTTONS - compact row ===== */
+  .admin-actions {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 0.5rem !important;
+  }
+
+  .btn-add-club,
+  .btn-edit-mode,
+  .btn-delete-mode {
+    width: auto !important;
+    padding: 0.5rem 0.875rem !important;
+    font-size: 0.8rem !important;
+    flex: 1;
+    min-width: 80px;
+  }
+
+  /* ===== HEADER - compact ===== */
+  .clubs-page {
+    padding: 0.75rem !important;
+  }
+
+  .clubs-header {
+    margin-bottom: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .jit-logo-image {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .brand-title {
+    font-size: 1.4rem !important;
+  }
+
+  .brand-icon {
+    font-size: 1.4rem !important;
+  }
+
+  .brand-subtitle {
+    font-size: 0.8rem !important;
+  }
+
+  .welcome-container {
+    position: static !important;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem !important;
+  }
+
+  .welcome-message {
+    font-size: 0.85rem !important;
+  }
+
+  .user-role {
+    font-size: 0.75rem !important;
+  }
+
+  /* ===== MEMBERS TABLE - card layout ===== */
+  .registrations-table table,
+  .registrations-table thead,
+  .registrations-table tbody,
+  .registrations-table th,
+  .registrations-table td,
+  .registrations-table tr {
+    display: block;
+  }
+
+  .registrations-table thead {
+    display: none;
+  }
+
+  .registrations-table tr {
+    border: 1px solid #E5D4C1;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+    background: white;
+  }
+
+  .registrations-table td {
+    border: none !important;
+    padding: 0.2rem 0 !important;
+    font-size: 0.85rem;
+    color: #5C4033;
+  }
+
+  .registrations-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #7A6655;
+    margin-right: 0.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  /* ===== DASHBOARD HEADER - compact ===== */
+  .dashboard-header {
+    padding-bottom: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .jit-logo-image {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  .club-logo-header {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  .dashboard-brand h1 {
+    font-size: 1.3rem !important;
+  }
+
+  .dashboard-subtitle {
+    font-size: 0.75rem !important;
+  }
+
+  .club-dashboard-container {
+    padding: 0.75rem !important;
+  }
+
+  .dashboard-main-content {
+    padding: 1rem !important;
+  }
 }
