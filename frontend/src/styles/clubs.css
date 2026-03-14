@@ -359,7 +359,8 @@
 
   .admin-actions {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .header-actions {
@@ -370,11 +371,12 @@
   .btn-delete-mode,
   .btn-edit-mode,
   .btn-logout {
-    width: 100%;
+    flex: 1;
+    min-width: 80px;
   }
 
   .clubs-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

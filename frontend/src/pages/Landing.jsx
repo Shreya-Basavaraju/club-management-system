@@ -1,8 +1,15 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import API from "../api/api";
 import "../styles/landing.css";
 
 function Landing() {
   const navigate = useNavigate();
+
+  // Silently wake up the Render backend while user reads the landing page
+  useEffect(() => {
+    API.get("/health").catch(() => {});
+  }, []);
 
   const handleGetStarted = () => {
     navigate("/login");

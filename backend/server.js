@@ -25,6 +25,11 @@ app.use(express.json());
 // ✅ Static folder for uploaded images
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
+// Health / wake-up endpoint
+app.get("/api/health", (req, res) => {
+  res.json({ status: "ok" });
+});
+
 // Test endpoint
 app.get("/api/test", (req, res) => {
   res.json({ message: "API is working!" });
