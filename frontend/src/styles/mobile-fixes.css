@@ -1,0 +1,56 @@
+/* ===== MOBILE COMPACT EVENT CARDS ===== */
+@media (max-width: 480px) {
+  .event-item {
+    flex-direction: row;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    min-height: unset;
+    align-items: center;
+  }
+
+  .event-thumbnail {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 8px;
+  }
+
+  .event-info h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .event-date {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .event-venue {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .event-description {
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .btn-register-event {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .registered-badge,
+  .completed-badge {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .panel-title {
+    font-size: 1.4rem;
+  }
+}
